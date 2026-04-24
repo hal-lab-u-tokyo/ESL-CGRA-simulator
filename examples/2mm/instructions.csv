@@ -1,0 +1,350 @@
+0
+"SADD ROUT, 15 ZERO       ","SADD R0, 15 ZERO         ","SADD ROUT, 15 ZERO       ","LWD R0, arg0             "
+"LWD R0, arg1             ","SADD ROUT, 15 ZERO       ","SADD ROUT, 16 ZERO       ","SADD ROUT, 15 ZERO       "
+"LWD R0, arg3             ","SADD ROUT, 15 ZERO       ","LWD R1, arg4             ","SADD ROUT, 15 ZERO       "
+"LWD R0, arg0             ","SADD R0, ZERO 24         ","SADD R0, 15 ZERO         ","SADD R0, 15 ZERO         "
+1
+"LWD R0, arg2             ","SLT ROUT, R0 12          ","SLT R0, RCB 12           ","SLT ROUT, RCR 12         "
+"SLT R1, RCR 12           ",NOP                      ,"SLT R0, RCT 12           ","SLT ROUT, RCB 12         "
+NOP                      ,"SADD ROUT, 15 ZERO       ","SADD R0, ZERO 24         ","SLT ROUT, RCT 12         "
+"SADD R1, ZERO 24         ","SLT R1, RCT 12           ","SLT R0, R0 12            ","SLT ROUT, R0 12          "
+2
+"SADD ROUT, 3584,RCR      ",NOP                      ,"SADD ROUT, 344,R0        ","SADD ROUT, 3608,RCB      "
+"SADD ROUT, 3588,R1       ",NOP                      ,"SADD ROUT, 3600,R0       ","SADD ROUT, 3616,RCT      "
+"SLT ROUT, RCR 12         ",NOP                      ,"SADD ROUT, R1 ZERO       ","SADD ROUT, 3592,RCB      "
+"SADD ROUT, R0 ZERO       ","SADD R1, 3596,R1         ","SADD ROUT, 3612,R0       ","SADD ROUT, 3604,RCT      "
+3
+NOP                      ,NOP                      ,"SADD ROUT, RCR ZERO      ","SADD ROUT, R0 ZERO       "
+"SWI R0,RCT               ",NOP                      ,"SADD ROUT, RCT ZERO      ",NOP                      
+"SADD ROUT, R0 ZERO       ","SADD ROUT, 3620,RCL      ","SWI R0,RCT               ",NOP                      
+"SWI R1,RCL               ","SWI R0,R1                ",NOP                      ,"SWI RCR,RCL              "
+4
+"SWI R0,RCB               ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,"JUMP 0, 6                ",NOP                      ,"SWI RCT,RCB              "
+NOP                      ,NOP                      ,"SWI RCT,RCL              ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+5
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SWI RCB,RCT              ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SWI RCR,RCT              "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+6
+"SADD ROUT, 2032, 0       ","SADD ROUT, 2032, 0       ","SADD ROUT, 2032, 0       ","SADD ROUT, 2032, 0       "
+"SADD ROUT, 2032, 0       ",NOP                      ,NOP                      ,"SADD ROUT, 2032, 0       "
+"SADD ROUT, 2032, 0       ","SADD ROUT, 2032, 0       ","SADD ROUT, 2032, 0       ",NOP                      
+NOP                      ,NOP                      ,"SADD ROUT, 2032, 0       ",NOP                      
+7
+"SLT ROUT, ROUT, 5        ","SLT ROUT, ROUT, 5        ","SLT R0, ROUT, 5          ","SLT ROUT, ROUT, 5        "
+"SLT R0, ROUT, 5          ",NOP                      ,NOP                      ,"SLT ROUT, ROUT, 5        "
+"SLT ROUT, ROUT, 5        ","SLT R1, ROUT, 5          ","SLT ROUT, ROUT, 5        ",NOP                      
+NOP                      ,NOP                      ,"SLT ROUT, ROUT, 5        ",NOP                      
+8
+"SADD R0, ROUT,4          ","SADD R0, ROUT,4          ","SADD R1, R0,12           ","SADD R0, ROUT,16         "
+"SADD R1, R0,8            ",NOP                      ,NOP                      ,"SADD R0, ROUT,8          "
+"SADD R0, ROUT,20         ","SADD R0, R1,16           ","SADD R0, ROUT,20         ",NOP                      
+NOP                      ,NOP                      ,"SADD R0, ROUT,4          ",NOP                      
+9
+NOP                      ,NOP                      ,"LWI ROUT, R1             ","LWI ROUT, R0             "
+"LWI R2, R1               ",NOP                      ,NOP                      ,NOP                      
+"LWI R2, R0               ","LWI R2, R0               ","LWI R2, R0               ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+10
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, RCT, 0        "
+NOP                      ,"SADD ROUT, RCL, 0        ",NOP                      ,NOP                      
+NOP                      ,"SADD ROUT, RCT, 0        ",NOP                      ,NOP                      
+11
+NOP                      ,"SADD R1, RCT, 0          ",NOP                      ,NOP                      
+NOP                      ,"SMUL R1, RCB, -4         ","SADD R1, RCR, 0          ","LWI R2, R0               "
+NOP                      ,"LWI R2, R0               ",NOP                      ,"SADD R1, RCT, 0          "
+"SADD R1, RCR, 0          ",NOP                      ,NOP                      ,NOP                      
+12
+"SADD ROUT, RCB,0         ","LWI ROUT, R0             ",NOP                      ,"LWI ROUT, R0             "
+"SADD R2, RCB,0           ",NOP                      ,"SMUL R2, RCB, 4          ",NOP                      
+"SMUL R2, RCR, 8          ","LWI ROUT, R1             ","SMUL R1, ROUT,-4         ","SMUL R2, RCL, 8          "
+"SMUL R2, RCT, 12         ","SMUL R2, RCT, 12         ","SADD R2, RCT, 0          ",NOP                      
+13
+"SMUL R1, RCB,-4          ","SADD R2, RCL, 4          ",NOP                      ,"SADD R2, RCL, 0          "
+"LWI ROUT, R0             ","SADD R2, RCT, 4          ","SADD R2, R2, RCR         ","SMUL R2, RCT, 4          "
+"SADD R2, R2, RCR         ","SADD R1, ZERO, ZERO      ",NOP                      ,"SADD R2, R2, RCT         "
+"SADD R2, R2, RCB         ","SADD R2, R2, RCT         ","LWI ROUT, R0             ","SMUL R1, RCL, -4         "
+14
+"LWI R2, R0               ",NOP                      ,"LWI R2, R0               ","SRA R2, R2, 2            "
+"SRA R2, R2, 2            ",NOP                      ,"SADD R2, R2, 8           ","SADD R2, R2, RCR         "
+NOP                      ,NOP                      ,"SADD R2, RCB,8           ","SADD R2, R2, 12          "
+NOP                      ,NOP                      ,"SRA R2, R2, 2            ","SADD R2, RCL,12          "
+15
+NOP                      ,NOP                      ,NOP                      ,"SADD R1, ZERO, ZERO      "
+"SADD R1, ZERO, ZERO      ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+16
+"SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      "
+"SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      "
+"SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      "
+"SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      ","SADD R3, ZERO, ZERO      "
+17
+"LWI R0, R2               ",NOP                      ,"LWI R0, R2               ",NOP                      
+NOP                      ,"LWI R0, R2               ",NOP                      ,"LWI R0, R2               "
+"LWI R0, R2               ","SADD R1, R1, 1           ","LWI R0, R2               ",NOP                      
+NOP                      ,"LWI R0, R2               ",NOP                      ,"LWI R0, R2               "
+18
+NOP                      ,"SADD R0, ZERO, RCB       ",NOP                      ,"SADD R0, ZERO, RCL       "
+"SADD R0, ZERO, RCL       ",NOP                      ,"SADD R0, ZERO, RCB       ",NOP                      
+NOP                      ,"SADD R0, ZERO, RCL       ",NOP                      ,"SADD R0, ZERO, RCB       "
+"SADD R0, ZERO, RCB       ",NOP                      ,"SADD R0, ZERO, RCL       ",NOP                      
+19
+"SADD ROUT, ZERO, RCL     ","SADD ROUT, ZERO, RCR     ","SADD ROUT, ZERO, RCB     ","SADD ROUT, ZERO, RCT     "
+"SADD ROUT, ZERO, RCT     ","SADD ROUT, ZERO, RCL     ","SADD ROUT, ZERO, RCR     ","SADD ROUT, ZERO, RCB     "
+"SADD ROUT, ZERO, RCB     ","SADD ROUT, ZERO, RCT     ","SADD ROUT, ZERO, RCL     ","SADD ROUT, ZERO, RCR     "
+"SADD ROUT, ZERO, RCR     ","SADD ROUT, ZERO, RCB     ","SADD ROUT, ZERO, RCT     ","SADD ROUT, ZERO, RCL     "
+20
+"SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      "
+"SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      "
+"SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      "
+"SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      ","SMUL ROUT, R0, ROUT      "
+21
+"SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        "
+"SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        "
+"SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        "
+"SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        ","SADD R3, R3, ROUT        "
+22
+"SSUB R2, R2, R1          ",NOP                      ,"SADD R2, R2, 4           ",NOP                      
+NOP                      ,"SSUB R2, R2, R1          ",NOP                      ,"SADD R2, R2, 4           "
+"SADD R2, R2, 4           ","BNE R1, R2, 17           ","SSUB R2, R2, R1          ",NOP                      
+NOP                      ,"SADD R2, R2, 4           ",NOP                      ,"SSUB R2, R2, R1          "
+23
+"SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           "
+"SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           "
+"SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           "
+"SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           ","SMUL R3, R3, 3           "
+24
+NOP                      ,"SADD ROUT, ZERO, R2      ",NOP                      ,NOP                      
+"SADD R1, R1, 1           ",NOP                      ,"SADD ROUT, ZERO, R2      ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, ZERO, R2      "
+"SADD ROUT, ZERO, R2      ",NOP                      ,NOP                      ,NOP                      
+25
+"SADD ROUT, RCR, -4       ","SADD R2, R2, 16          ","SADD ROUT, RCL, 4        ",NOP                      
+NOP                      ,"SADD ROUT, RCR, -4       ","SADD R2, R2, 16          ","SADD ROUT, RCL, 4        "
+"SADD ROUT, RCL, -12      ",NOP                      ,"SADD ROUT, RCR, -4       ","SADD R2, R2, 16          "
+"SADD R2, R2, 16          ","SADD ROUT, RCL, 4        ",NOP                      ,"SADD ROUT, RCR, 12       "
+26
+NOP                      ,"SADD ROUT, R2, -16       ",NOP                      ,"SADD ROUT, RCL, 4        "
+"SADD ROUT, RCR, -4       ",NOP                      ,"SADD ROUT, R2, -16       ",NOP                      
+NOP                      ,"SADD ROUT, RCR, -4       ",NOP                      ,"SADD ROUT, R2, -16       "
+"SADD ROUT, R2, -16       ",NOP                      ,"SADD ROUT, RCR, -4       ",NOP                      
+27
+"SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             "
+"SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             "
+"SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             "
+"SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             ","SWI R3, ROUT             "
+28
+"SADD R2, R2, 16          ","SADD ROUT, ZERO, R1      ",NOP                      ,NOP                      
+NOP                      ,"SADD R2, R2, 16          ","SADD ROUT, ZERO, R1      ",NOP                      
+NOP                      ,NOP                      ,"SADD R2, R2, 16          ","SADD ROUT, ZERO, R1      "
+"SADD ROUT, ZERO, R1      ",NOP                      ,NOP                      ,"SADD R2, R2, 16          "
+29
+"SMUL ROUT, RCR, R1       ",NOP                      ,"SMUL ROUT, RCL, -4       ",NOP                      
+NOP                      ,"SMUL ROUT, RCR, R1       ",NOP                      ,"SMUL ROUT, RCL, -4       "
+"SMUL ROUT, RCL, -4       ","SADD R1, ZERO, ZERO      ","SMUL ROUT, RCR, R1       ",NOP                      
+NOP                      ,"SMUL ROUT, RCL, -4       ",NOP                      ,"SMUL ROUT, RCR, R1       "
+30
+"SADD R2, R2, ROUT        ",NOP                      ,"SADD R2, R2, ROUT        ",NOP                      
+"BNE R1, R2, 16           ","SADD R2, R2, ROUT        ",NOP                      ,"SADD R2, R2, ROUT        "
+"SADD R2, R2, ROUT        ",NOP                      ,"SADD R2, R2, ROUT        ",NOP                      
+NOP                      ,"SADD R2, R2, ROUT        ",NOP                      ,"SADD R2, R2, ROUT        "
+31
+"SMUL ROUT, R1, -4        ","SMUL ROUT, R1, 16        ",NOP                      ,"SADD R1, R1, 1           "
+"SMUL ROUT, R2, -16       ","SMUL ROUT, R1, -4        ","SMUL ROUT, R1, 16        ",NOP                      
+NOP                      ,NOP                      ,"SMUL ROUT, R1, -4        ","SMUL ROUT, R1, 16        "
+"SMUL ROUT, R1, 16        ",NOP                      ,"SMUL ROUT, R2, -16       ","SMUL ROUT, R1, -4        "
+32
+"SADD ROUT, ZERO, RCB     ","SADD R2, R2, RCL         ","SADD R2, R2, RCL         ",NOP                      
+"SADD R1, ZERO, ZERO      ","SADD ROUT, ZERO, RCL     ","SADD R2, R2, RCL         ","SADD R2, R2, RCL         "
+"SADD R2, R2, RCL         ",NOP                      ,"SADD ROUT, ZERO, RCB     ","SADD R2, R2, RCL         "
+"SADD R2, R2, RCL         ","SADD R2, R2, RCL         ",NOP                      ,"SADD ROUT, ZERO, RCL     "
+33
+"SADD R2, R2, ROUT        ","SADD R2, R2, RCL         ",NOP                      ,"BNE R1, R2, 16           "
+NOP                      ,"SADD R2, R2, ROUT        ","SADD R2, R2, RCL         ",NOP                      
+NOP                      ,NOP                      ,"SADD R2, R2, ROUT        ","SADD R2, R2, RCL         "
+"SADD R2, R2, RCL         ",NOP                      ,NOP                      ,"SADD R2, R2, ROUT        "
+34
+NOP                      ,"SADD ROUT, 15 ZERO       ",NOP                      ,NOP                      
+"SADD ROUT, 15 ZERO       ",NOP                      ,NOP                      ,"SADD ROUT, 15 ZERO       "
+NOP                      ,"SADD R0, 15 ZERO         ","SADD R0, ZERO ZERO       ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+35
+"SLT R0, RCB 12           ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"SLT ROUT, R0 12          ",NOP                      ,"SLT R0, RCT 12           "
+NOP                      ,"SLT ROUT, RCB 12         ",NOP                      ,NOP                      
+36
+"SADD ROUT, 3612,R0       ","SADD ROUT, 3620,RCT      ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, 3608,R0       "
+NOP                      ,"SADD ROUT, 3616,RCT      ",NOP                      ,NOP                      
+37
+NOP                      ,"LWI ROUT, RCT            ",NOP                      ,NOP                      
+NOP                      ,"LWI R0, RCT              ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+"LWI R0, RCB              ",NOP                      ,NOP                      ,"LWI R0, RCT              "
+38
+"SADD ROUT, RCR ZERO      ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+39
+NOP                      ,NOP                      ,NOP                      ,"SADD R0, RCR ZERO        "
+NOP                      ,NOP                      ,"JUMP 0, 40               ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+40
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, ZERO 24       "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+41
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,"BGE R0,RCR, 69           ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+42
+NOP                      ,"JUMP 0, 43               ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD R0, ZERO ZERO       "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+43
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SADD ROUT, ZERO 24       ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+44
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"BGE R0,RCL, 68           "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+45
+NOP                      ,"SADD R0, ZERO ZERO       ",NOP                      ,NOP                      
+"SADD R0, ZERO 24         ",NOP                      ,NOP                      ,"SADD ROUT, R0 ZERO       "
+"SADD R0, ZERO ZERO       ",NOP                      ,"SMUL ROUT, R0 24         ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+46
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, RCL,RCT       "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+47
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SMUL R1, RCT 4           "
+48
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, R0,R1         "
+49
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,"LWI ROUT, RCR            ",NOP                      
+50
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"SMUL ROUT, RCR 6         ",NOP                      ,NOP                      
+51
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"SADD R1, RCB ZERO        ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"JUMP 0, 52               "
+52
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+"SADD R0, R0 ZERO         ",NOP                      ,"SMUL ROUT, R0 24         ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+53
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+"SMUL ROUT, RCB 24        ",NOP                      ,NOP                      ,NOP                      
+"SADD R0, R0 1            ",NOP                      ,NOP                      ,"SADD ROUT, RCL,RCR       "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+54
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD R1, RCR,R0          "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SMUL ROUT, RCT 4         "
+55
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SMUL ROUT, R1 4          "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+"SADD R1, R0,RCL          ",NOP                      ,NOP                      ,NOP                      
+56
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, R0,RCB        "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+"LWI ROUT, R1             ",NOP                      ,NOP                      ,NOP                      
+57
+"LWI R0, RCL              ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+58
+"SMUL ROUT, RCT,R0        ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+59
+NOP                      ,"SADD R0, R0,RCL          ",NOP                      ,NOP                      
+"BLT RCB,R0, 52           ",NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+60
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD R0, R0 ZERO         "
+NOP                      ,NOP                      ,"SADD R1, R0 ZERO         ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+61
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SMUL ROUT, RCB 24        ",NOP                      
+NOP                      ,NOP                      ,"SMUL ROUT, R1 24         ","SMUL R0, RCL 24          "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+62
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SADD ROUT, RCB,RCR       ","SADD ROUT, RCL,R0        "
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, R0,RCT        "
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+63
+NOP                      ,NOP                      ,"SMUL ROUT, RCB 4         ",NOP                      
+NOP                      ,NOP                      ,"SMUL ROUT, RCR 4         ","SADD R0, R0 1            "
+NOP                      ,NOP                      ,"SMUL ROUT, RCR 4         ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+64
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"SADD ROUT, RCR,R0        ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+65
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"SADD ROUT, R0 ZERO       ",NOP                      ,NOP                      
+NOP                      ,"LWI R0, RCT              ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,"SADD ROUT, R0 ZERO       "
+66
+NOP                      ,"SADD ROUT, R0 ZERO       ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SADD ROUT, RCB,RCL       ",NOP                      
+NOP                      ,"SADD ROUT, R0,R1         ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SADD ROUT, RCR,RCB       ",NOP                      
+67
+NOP                      ,NOP                      ,NOP                      ,"JUMP 0, 43               "
+NOP                      ,"SWI RCT,RCR              ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"SWI RCT,RCR              ",NOP                      ,NOP                      
+68
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,"JUMP 0, 40               ",NOP                      ,NOP                      
+NOP                      ,NOP                      ,"SADD R0, R0 1            ",NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+69
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
+NOP                      ,EXIT                     ,NOP                      ,NOP                      
+NOP                      ,NOP                      ,NOP                      ,NOP                      
