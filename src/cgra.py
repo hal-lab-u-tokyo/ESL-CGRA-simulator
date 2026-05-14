@@ -293,7 +293,7 @@ class PE:
             branch  = self.fetch_val( instr[3] )
             method = self.ops_branch[self.op]
             method(self, val1, val2, branch)
-            self.out = branch
+            self.out = val1
 
         elif self.op in self.ops_lwd:
             des = instr[1]
