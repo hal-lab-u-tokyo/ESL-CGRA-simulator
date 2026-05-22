@@ -53,6 +53,7 @@ SMUL,	1,	1.81E-04
 SMUL,	3,	1.81E-04
 SMUL_EXT,	3,	1.01E-04
 SMUL_INT,	3,	1.41E-04
+DIVUI,	3,	1.41E-04
 SMUL_X0,	3,	5.92E-05
 SMUL_X1,	3,	6.02E-05
 SMUL_X2,	3,	7.14E-05
@@ -87,6 +88,7 @@ LWI,2
 SWI,2
 SMUL,3
 FXPMUL,3
+DIVUI,3
 
 # operation_passive_power_w_mapping
 NOP, 1, 1.4e-05

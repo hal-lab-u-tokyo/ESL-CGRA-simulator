@@ -370,6 +370,9 @@ class PE:
 
     def lxnor( val1, val2 ):
         return c_int32( ~( val1 ^ val2 ) & MAX_32b ).value
+    
+    def divui( val1, val2 ):
+        return c_int32( val1 // val2 ).value
 
     def bsfa( self, val1, val2, src):
         flag = self.fetch_flag( src, 'sign')
@@ -403,7 +406,8 @@ class PE:
                     'LXOR'      : lxor,
                     'LNAND'     : lnand,
                     'LNOR'      : lnor,
-                    'LXNOR'     : lxnor }
+                    'LXNOR'     : lxnor,
+                    'DIVUI'     : divui }
 
     ops_cond    = { 'BSFA'      : bsfa,
                     'BZFA'      : bzfa }

@@ -31,7 +31,7 @@ def get_neighbor(r, c, direction):
 
 
 MEM_OPS = {"LWD", "SWD", "LWI", "SWI"}
-MUL_OPS = {"SMUL", "FXPMUL"}
+MUL_OPS = {"SMUL", "FXPMUL", "DIVUI"}
 CTRL_OPS = {"EXIT", "JUMP", "BEQ", "BNE", "BLT", "BGE"}
 COND_OPS = {"BSFA", "BZFA"}
 SHIFT_OPS = {"SRT", "SRA", "SLT"}
